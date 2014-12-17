@@ -1,0 +1,26 @@
+{
+    "name": "evan/issuu",
+    "description": "An unofficial client for the Issuu API",
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~4.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.4",
+        "squizlabs/php_codesniffer": "~2.0",
+        "phpdocumentor/phpdocumentor": "~2.7.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tasso Evangelista",
+            "email": "tasso@tassoevan.me"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Evan\\APIs\\Issuu\\": "src/"
+        }
+    }
+}
