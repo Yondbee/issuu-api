@@ -3,7 +3,7 @@
     "description": "An unofficial client for the Issuu API",
     "require": {
         "php": ">=5.4.0",
-        "guzzlehttp/guzzle": "~4.1.0"
+        "guzzlehttp/guzzle": "@stable"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.4",
@@ -15,7 +15,11 @@
         {
             "name": "Tasso Evangelista",
             "email": "tasso@tassoevan.me"
-        }
+        },
+        {
+            "name": "Andrea Santambrogio",
+            "email": "andrea@yondbee.com"
+        }        
     ],
     "minimum-stability": "stable",
     "autoload": {
