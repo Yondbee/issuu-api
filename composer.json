@@ -1,6 +1,6 @@
 {
-    "name": "evan/issuu",
-    "description": "An unofficial client for the Issuu API",
+    "name": "yondbee/issuu",
+    "description": "An unofficial client for the Issuu API (updated!)",
     "require": {
         "php": ">=5.4.0",
         "guzzlehttp/guzzle": "@stable"
