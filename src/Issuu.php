@@ -211,6 +211,16 @@ class Issuu
 
         return $response['_content']['document'];
     }
+    
+    public function url_upload(array $options)
+    {
+        $response = $this->doAction(
+            'issuu.document.url_upload',
+            $options
+        );
+
+        return $response['_content']['document'];
+    }    
 
     public function update(array $options)
     {
