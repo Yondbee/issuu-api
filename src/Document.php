@@ -9,7 +9,7 @@
  * @php     5.4
  */
 
-namespace Evan\APIs\Issuu;
+namespace Yondbee\APIs\Issuu;
 
 use DateTime;
 

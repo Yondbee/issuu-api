@@ -24,7 +24,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Evan\\APIs\\Issuu\\": "src/"
+            "Yondbee\\APIs\\Issuu\\": "src/"
         }
     }
 }

@@ -9,7 +9,7 @@
  * @php     5.4
  */
 
-namespace TassoEvan\APIs\Issuu;
+namespace Yondbee\APIs\Issuu;
 
 use RuntimeException;
 
