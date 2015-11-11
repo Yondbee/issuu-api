@@ -102,7 +102,8 @@ class Issuu
     private function doAction(
         $actionName,
         array $options,
-        $endPoint = 'http://api.issuu.com/1_0'
+        $endPoint = 'http://api.issuu.com/1_0',
+        $convertToJson = true
     ) {
         $header = array(
             'action'      => $actionName,
@@ -146,6 +147,10 @@ class Issuu
             $endPoint,
             array('form_params' => $data)
         );
+
+        // for html responses
+        if (!$convertToJson)
+            return $response->getBody();
 
         $response = json_decode($response->getBody(), true);
         if ($response['rsp']['stat'] == 'fail') {
@@ -293,5 +298,19 @@ class Issuu
         );
 
         return $response['_content']['documentEmbed'];
+    }
+
+    public function getEmbedHTML($eid) {
+
+        $response = $this->doAction(
+            'issuu.document_embed.get_html_code',
+            array(
+                'embedId' => $eid
+            ),
+            'http://api.issuu.com/1_0',
+            false
+        );
+
+        return $response;
     }
 }
