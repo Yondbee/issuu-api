@@ -144,10 +144,10 @@ class Issuu
 
         $response = $this->client->post(
             $endPoint,
-            array('body' => $data)
+            array('form_params' => $data)
         );
 
-        $response = $response->json();
+        $response = json_decode($response->getBody(), true);
         if ($response['rsp']['stat'] == 'fail') {
             $message = $response['rsp']['_content']['error']['message'];
             if (isset($response['rsp']['_content']['error']['field'])) {
@@ -211,7 +211,7 @@ class Issuu
 
         return $response['_content']['document'];
     }
-    
+
     public function url_upload(array $options)
     {
         $response = $this->doAction(
@@ -220,7 +220,7 @@ class Issuu
         );
 
         return $response['_content']['document'];
-    }    
+    }
 
     public function update(array $options)
     {
